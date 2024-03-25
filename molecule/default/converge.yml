@@ -1,8 +1,18 @@
 ---
 - name: Converge
   hosts: all
-  gather_facts: false
+  gather_facts: true
+  vars:
+    ansible_user: globus
   tasks:
-    - name: Testing role
-      ansible.builtin.include_role:
+    - name: Display some specific system facts
+      debug:
+        msg:
+          - "OS Family: {{ ansible_os_family }}"
+          - "Distribution Major Version: {{ ansible_distribution_major_version }}"
+          - "Distribution Release: {{ ansible_distribution_release }}"
+          - "Distribution: {{ ansible_distribution }}"
+          - "gcs_repo: {{ _repo_infixes[gcs_repo] }}"
+    - name: Replace this task with one that validates your content
+      ansible.builtin.import_role:
         name: globus.globus-connect-server

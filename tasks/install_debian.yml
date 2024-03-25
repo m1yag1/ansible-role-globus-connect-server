@@ -55,13 +55,11 @@
     - gcs_repo == "pre-stable"
     - gcs_proxy is defined
 
-- name: Update the APT cache
-  become: yes
-  apt:
-    update_cache: yes
-
 - name: Install the Globus Connect Server
   become: yes
   apt:
     name: globus-connect-server54
+    update_cache: yes
     state: present
+
+
