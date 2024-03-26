@@ -1,3 +1,4 @@
+---
 ##################################################
 #      INSTALLATION FOR OPENSUSE DERIVATIVES.
 ##################################################
@@ -74,4 +75,3 @@
     state: present
   environment:
     HTTPS_PROXY: "{{'socks5h://{{ gcs_proxy }}' if (gcs_proxy is defined) else '' }}"
-

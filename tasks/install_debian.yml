@@ -1,3 +1,4 @@
+---
 ##################################################
 #     INSTALLATION FOR Ubuntu/Debian
 ##################################################
@@ -61,5 +62,3 @@
     name: globus-connect-server54
     update_cache: yes
     state: present
-
-

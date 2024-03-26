@@ -19,5 +19,5 @@ platforms:
 provisioner:
   name: ansible
   inventory:
-      host_vars:
-        ansible_user: globus
+    host_vars:
+      ansible_user: globus
