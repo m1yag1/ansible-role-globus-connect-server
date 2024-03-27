@@ -37,6 +37,8 @@ jobs:
                 include:
                     - distro: debian
                       version: 12
+                    - distro: debian
+                      version: 11
         steps:
             - name: Checkout the codebase
               uses: actions/checkout@v4
